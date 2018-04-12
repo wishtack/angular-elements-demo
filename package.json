@@ -5,7 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-hashing=none",
+    "build:all": "yarn build book && yarn build user",
+    "build:all:help": "echo Hack because building multiple apps break when using options...",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -16,6 +18,7 @@
     "@angular/common": "^6.0.0-rc.1",
     "@angular/compiler": "^6.0.0-rc.1",
     "@angular/core": "^6.0.0-rc.1",
+    "@angular/elements": "^6.0.0-rc.4",
     "@angular/forms": "^6.0.0-rc.1",
     "@angular/http": "^6.0.0-rc.1",
     "@angular/platform-browser": "^6.0.0-rc.1",
@@ -26,10 +29,9 @@
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^6.0.0-rc.1",
     "@angular-devkit/build-angular": "~0.5.0",
-    "typescript": "~2.7.2",
     "@angular/cli": "~6.0.0-rc.3",
+    "@angular/compiler-cli": "^6.0.0-rc.1",
     "@angular/language-service": "^6.0.0-rc.1",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
@@ -44,6 +46,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
-    "tslint": "~5.9.1"
+    "tslint": "~5.9.1",
+    "typescript": "~2.7.2"
   }
 }
