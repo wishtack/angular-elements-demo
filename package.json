@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --output-hashing=none",
+    "start": "http-server",
+    "build": "ng build --build-optimizer=false --output-hashing=none --prod",
     "build:all": "yarn build book && yarn build user",
     "build:all:help": "echo Hack because building multiple apps break when using options...",
     "test": "ng test",
@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0-rc.1",
     "@angular/router": "^6.0.0-rc.1",
     "core-js": "^2.5.4",
+    "http-server": "^0.11.1",
     "rxjs": "^6.0.0-rc.0",
     "zone.js": "^0.8.24"
   },

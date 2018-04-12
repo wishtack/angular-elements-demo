@@ -1,0 +1,33 @@
+
+<html>
+<head>
+
+    <script defer src="dist/book/runtime.js"></script>
+    <script defer src="dist/book/polyfills.js"></script>
+    <script defer src="dist/book/main.js"></script>
+
+    <script defer src="dist/user/runtime.js"></script>
+    <script defer src="dist/user/polyfills.js"></script>
+    <script defer src="dist/user/main.js"></script>
+
+    <script>
+
+        setInterval(() => {
+            const userElement = document.querySelector('wt-user');
+            userElement.name += '.';
+        }, 1000);
+
+    </script>
+
+</head>
+<body>
+
+
+<wt-book></wt-book>
+<wt-book></wt-book>
+
+<wt-user name="foo"></wt-user>
+<wt-user name="bar"></wt-user>
+
+</body>
+</html>

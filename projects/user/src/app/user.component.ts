@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'wt-user',
     template: `
-  <div>User</div>
+  <div>User: {{ name }}</div>
   `
 })
 export class UserComponent {
+
+    @Input() name: string;
+
 }
